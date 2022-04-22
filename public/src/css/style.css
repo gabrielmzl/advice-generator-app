@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-neon-green: hsl(150, 100%, 66%);
+
+  --neutral-grayish-blue: hsl(217, 19%, 38%);
+  --neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --neutral-dark-blue: hsl(218, 23%, 16%)
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: var(--neutral-dark-blue);
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--neutral-dark-grayish-blue);
+  padding: 30px;
+  max-width: 550px;
+  border-radius: 10px;
+  margin: 50px;
+
+  text-align: center;
+}
+
+.card h1 {
+  color: var(--primary-neon-green);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--primary-light-cyan);
+  font-size: 1.9rem;
+
+  margin-bottom: 30px;
+}
+
+.card-separator {
+  margin-bottom: 30px;
+}
+
+.card button {
+  background-color: var(--primary-neon-green);
+  border: none;
+  border-radius: 9999px;
+  padding: 1.2rem;
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card button:hover {
+  box-shadow: 0 5px 15px hsl(150, 100%, 66%);
+}
+
+.card button img {
+  width: 1.4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  #mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .card {
+    max-width: 250px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-separator img {
+    width: 10rem;
+  }
+}
