@@ -147,7 +147,7 @@ body {
   display: none;
 }
 
-.alert2 {
+#alert2 {
   background-color: var(--neutraldarkgrayishblue);
   padding: 30px;
   border-radius: 10px;

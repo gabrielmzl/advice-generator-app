@@ -33,7 +33,7 @@ function favoriteAdvice() {
     favoriteAdvice.push(actuallyAdvice);
     localStorage.setItem('favoriteAdvice', JSON.stringify(favoriteAdvice));
     alert.innerHTML = 'This advice has been added to your favorites';
-    alert.style.color = "black";
+    alert.style.color = "#2da96b";
     alert.style.display = "block";
 
     setDisplayNone()
@@ -51,13 +51,16 @@ function removeAdvice(id) {
 }
 
 function showFavorites() {
-
+  const alert = document.querySelector('#alert2')
   const favoriteAdvice = JSON.parse(localStorage.getItem('favoriteAdvice')) || [];
+  var ul = document.getElementById('favorites-list');
 
   if (favoriteAdvice.length === 0) {
-    console.log('You have no favorites yet')
+    ul.innerHTML = ''
+    alert.style.color = "#e06656";
+    alert.style.display = "block";
   } else {
-    var ul = document.getElementById('favorites-list');
+    alert.style.display = "none";
     ul.innerHTML = ''
     for (let i = 0; i < favoriteAdvice.length; i++) {
       axios(`https://api.adviceslip.com/advice/${favoriteAdvice[i]}`)
