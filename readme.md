@@ -1,5 +1,29 @@
+
 # Frontend Mentor - Advice generator app solution
 
-This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Esta é uma solução para o desafio do aplicativo Advice generator.
 
-![](https://i.imgur.com/04BzORV.jpg)
+
+
+
+## Funcionalidades
+
+✅ Gerador de conselhos
+
+✅ Favoritar conselhos
+
+✅ Temas dark e light
+
+
+## Demonstração
+
+#### Preview
+https://mzl-advice-generator.netlify.app/
+
+![](https://i.imgur.com/1FXWytF.gif)
+
+
+## Referência
+
+ - [FrontEnd Mentor](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+
