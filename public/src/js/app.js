@@ -11,8 +11,6 @@ function generateAdvice() {
     });
 }
 
-generateAdvice()
-
 function favoriteAdvice() {
 
   function setDisplayNone() {
@@ -35,7 +33,7 @@ function favoriteAdvice() {
     favoriteAdvice.push(actuallyAdvice);
     localStorage.setItem('favoriteAdvice', JSON.stringify(favoriteAdvice));
     alert.innerHTML = 'This advice has been added to your favorites';
-    alert.style.color = "#52ffa8";
+    alert.style.color = "black";
     alert.style.display = "block";
 
     setDisplayNone()
@@ -78,4 +76,19 @@ function showFavorites() {
   }
 }
 
+generateAdvice()
 showFavorites()
+
+const html = document.querySelector("html")
+const checkbox = document.querySelector('input[name=theme]')
+const checkboxColorMode = JSON.parse(localStorage.getItem('colorMode'))
+
+checkbox.addEventListener("change", ({ target }) => {
+  target.checked ? html.classList.add('white-mode') : html.classList.remove('white-mode')
+  localStorage.setItem('colorMode', target.checked)
+})
+
+if (checkboxColorMode) {
+  checkbox.checked = checkboxColorMode
+  html.classList.add('white-mode')
+}
