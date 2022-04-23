@@ -145,6 +145,8 @@ body {
   border-radius: 10px;
 
   display: none;
+  position: absolute;
+  top: 272px;
 }
 
 #alert2 {
